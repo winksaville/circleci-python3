@@ -1,9 +1,12 @@
 # Circle.yml for testing python3 with Ubuntu 14.04
+machine:
+  python:
+    version: 3.5.1
+
 test:
   pre:
-    - pyenv global 3.5.0
+    - pyenv global 3.5.1
     - python --version
-    #When using pyenv global 3.5.0 python2 doesn't work any longer
     #- python2 --version
     - python3 --version
 
