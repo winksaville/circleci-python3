@@ -5,9 +5,9 @@ machine:
 
 test:
   pre:
-    - pyenv global 3.5.1
+    #- pyenv global 3.5.1
     - python --version
-    #- python2 --version
+    - python2 --version
     - python3 --version
 
   override:
