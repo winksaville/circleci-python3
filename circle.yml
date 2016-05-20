@@ -1,5 +1,5 @@
 # Circle.yml for testing python3 with Ubuntu 14.04
-machine:
+#machine:
   #python:
   #  version: 3.5.1
 
