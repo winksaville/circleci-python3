@@ -1,10 +1,20 @@
 # Circle.yml for testing python3 with Ubuntu 14.04
-#machine:
-  #python:
-  #  version: 3.5.1
+machine:
+  environment:
+    INSTALL_PREFIX_DIR: ${HOME}/opt
+    PATH: ${INSTALL_PREFIX_DIR}/py-351/bin:${PATH}
 
 test:
   pre:
+    # Install python3 from sources
+    - wget https://www.python.org/ftp/python/3.5.1/Python-3.5.1.tgz
+    - tar xf Python-3.5.1.tgz
+    - mkdir ${INSTALL_PREFIX_DIR}/py-351
+    - cd Phthon-3.5.1/ ; ./configure --prefix=${INSTALL_PREFIX_DIR}/py-351
+    - cd Phthon-3.5.1/ ; make
+    - cd Phthon-3.5.1/ ; make test
+    - cd Phthon-3.5.1/ ; make install
+
     #- pyenv global 3.5.1
     - python --version
     - python2 --version
