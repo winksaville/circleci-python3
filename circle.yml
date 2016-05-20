@@ -1,5 +1,6 @@
 test:
   pre:
+    - pyenv global 3.5.0
     - python --version
     - python2 --version
     - python3 --version
