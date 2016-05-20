@@ -1,15 +1,8 @@
-machine:
-
-  #python:
-  #  version: 3.5.1
-
-dependencies:
-
+test:
   pre:
     - python --version
     - python2 --version
     - python3 --version
 
-test:
   override:
     - python3 -c 'print("OK")'
