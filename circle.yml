@@ -1,6 +1,7 @@
 # Circle.yml for testing python3 with Ubuntu 14.04
 machine:
   environment:
+    REQUESTED_PYTHON_VER: 3.5.1
     SRC_PREFIX_DIR: ${HOME}/src
     INSTALL_PREFIX_DIR: ${HOME}/opt
     PATH: ${INSTALL_PREFIX_DIR}/Python-3.5.1/bin:${PATH}
@@ -12,7 +13,8 @@ dependencies:
 
   pre:
     # Install python3 from sources
-    - EXPECTED_VERSION="3.5.1" ./python_install.sh
+    # REQUESTED_PYTHON_VER set in machine.environment
+    - ./python_install.sh
 
 test:
   pre:

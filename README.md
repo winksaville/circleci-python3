@@ -7,7 +7,7 @@ to control the installation:
 
 ```
   FORCE : Use TRUE to force the installation
-  EXPECTED_VERSION : 3.5.1
+  REQUESTED_PYTHON_VER : 3.5.1
   SRC_PREFIX_DIR : ${HOME}/opt/src
   INSTALL_PREFIX_DIR : ${HOME}/opt
 
@@ -16,8 +16,8 @@ to control the installation:
     FORCE=TRUE ./python_install.sh
 
   or to compile 3.5.0
-    EXPECTED_VERSION=3.5.0 ./python_install.sh
+    REQUESTED_PYTHON_VER=3.5.0 ./python_install.sh
 
   or to compile 3.5.0 to ${HOME}/srouces/ and ${HOME}/install/
-    EXPECTED_VERSION=3.5.0 SRC_PREFIX_DIR=${HOME}/sources INSTALL_PREFIX_DIR=${HOME}/install ./python_install.sh
+    REQUESTED_PYTHON_VER=3.5.0 SRC_PREFIX_DIR=${HOME}/sources INSTALL_PREFIX_DIR=${HOME}/install ./python_install.sh
 ```
