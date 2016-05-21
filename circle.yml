@@ -8,7 +8,7 @@ machine:
 test:
   pre:
     # Install python3 from sources
-    - ./python3.5.1-install.sh
+    - ./python-3.5.1_install.sh
 
     #- pyenv global 3.5.1
     - which python
