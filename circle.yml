@@ -10,11 +10,12 @@ dependencies:
     #- ${INSTALL_PREFIX_DIR}
     - ~/opt
 
-test:
   pre:
     # Install python3 from sources
     - EXPECTED_VERSION="3.5.1" ./python_install.sh
 
+test:
+  pre:
     - which python
     - python --version
     - which python2
