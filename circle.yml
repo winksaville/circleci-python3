@@ -5,12 +5,15 @@ machine:
     INSTALL_PREFIX_DIR: ${HOME}/opt
     PATH: ${INSTALL_PREFIX_DIR}/py-351/bin:${PATH}
 
+dependencies:
+  cache_directories:
+    - ${INSTALL_PREFIX_DIR}
+
 test:
   pre:
     # Install python3 from sources
-    - ./python-3.5.1_install.sh
+    - EXPECTED_VERSION="3.5.1" ./python_install.sh
 
-    #- pyenv global 3.5.1
     - which python
     - python --version
     - which python2
