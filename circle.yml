@@ -4,7 +4,7 @@ machine:
     - cat /etc/*release
     - pyenv global 2.7.11 3.5.1
 
-tlocalest:
+test:
   pre:
     - which python
     - v=$(python --version 2>& 1); if [ "$v" == "Python 2.7.11" ]; then echo "$v OK"; else ! echo "$v ERR"; fi
