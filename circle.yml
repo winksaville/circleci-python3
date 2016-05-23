@@ -2,7 +2,7 @@
 machine:
   pre:
     - cat /etc/*release
-    - pyenv local 3.5.1
+#    - pyenv local 3.5.1
 #
 #  python:
 #    version: 3.5.1
