@@ -6,6 +6,10 @@
   #python:
   #  version: 3.5.1
 
+dependencies:
+  pre:
+    - pyenv global 3.5.1
+
 test:
   pre:
     - which python
